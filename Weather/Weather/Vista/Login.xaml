@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Vista.Login"
+             Title="Login">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Campo para el usuario -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label WidthRequest="100" Text="Usuario" />
+            <Entry WidthRequest="250" x:Name="user" />
+        </StackLayout>
+
+        <!-- Campo para la contraseña -->
+        <StackLayout Grid.Row="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label WidthRequest="100" Text="Contraseña" />
+            <Entry IsPassword="True" WidthRequest="250" x:Name="password" />
+        </StackLayout>
+
+        <!-- Botón de Login -->
+        <Button Grid.Row="3" Text="Login" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" />
+    </Grid>
+</ContentPage>
+
